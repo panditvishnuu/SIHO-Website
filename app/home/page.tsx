@@ -1,6 +1,6 @@
 "use client";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { cn } from "@/lib/utils";
 import GridPattern from "@/components/ui/grid-pattern";
 import { words } from "@/constants/index";
@@ -12,8 +12,13 @@ import { FocusCards } from "@/components/ui/focus-cards";
 import { images } from "@/constants/index";
 import { BackgroundBoxesDemo } from "@/components/backgroundBoxes";
 
+export type Card = {
+  title: string;
+  src: string | StaticImageData; // Allow src to be either string or StaticImageData
+};
+
 export function FocusCardsDemo() {
-  const cards = [
+  const cards: Card[] = [
     { title: "", src: images.image1 },
     { title: "", src: images.image2 },
     { title: "", src: images.image3 },

@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -34,8 +34,7 @@ export const Card = React.memo(
           "absolute inset-0 flex items-end py-4 px-4 transition-opacity duration-300",
           hovered === index ? "opacity-100" : "opacity-0"
         )}
-      >
-      </div>
+      ></div>
     </div>
   )
 );
@@ -44,7 +43,7 @@ Card.displayName = "Card";
 
 type Card = {
   title: string;
-  src: string;
+  src: string | StaticImageData;
 };
 
 export function FocusCards({ cards }: { cards: Card[] }) {
