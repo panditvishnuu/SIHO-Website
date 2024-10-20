@@ -26,7 +26,6 @@ export function FadeText({
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: triggerOnce,
-    threshold: [threshold], // Add threshold as an array, required by IntersectionObserver
   });
 
   const directionOffset = useMemo(() => {
