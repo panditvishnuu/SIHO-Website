@@ -89,7 +89,7 @@ const Footer = () => {
                 <FaInstagram size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/siho-research/"
                 className="text-gray-400 hover:text-white transition duration-300"
               >
                 <FaLinkedinIn size={20} />

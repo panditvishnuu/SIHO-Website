@@ -1,8 +1,9 @@
 "use client";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { images } from "@/constants";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
+
 
 export function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (
