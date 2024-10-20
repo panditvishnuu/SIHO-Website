@@ -4,6 +4,12 @@ import React from "react";
 import { images } from "@/constants";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 
+type CardType = {
+  src: string | StaticImageData;
+  title: string;
+  category: string;
+};
+
 
 export function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (
@@ -21,7 +27,7 @@ export function AppleCardsCarouselDemo() {
 }
 
 
-const data = [
+const data: CardType[] = [
   {
     category: "Knowledge",
     title:
